@@ -1,47 +1,39 @@
-# ZomatoAI Presentation Website
+# 🍔 ZomatoAI Presentation Website
 
-## Overview
 Interactive presentation website explaining ZomatoAI's approach to solving choice paralysis in food ordering.
 
-## Structure
-- **index.html** - Main presentation content in Q&A format
-- **styles.css** - Swiss design aesthetic styling
-- **script.js** - Scroll animations and interactions
+## 🚀 GitHub Pages Setup
 
-## How to View
-Simply open `index.html` in any modern web browser.
+This website is configured for GitHub Pages. After pushing to the repository, enable GitHub Pages:
+
+1. Go to repository Settings → Pages
+2. Select source: "Deploy from a branch"
+3. Select branch: "main"
+4. Select folder: "/ (root)"
+5. Click Save
+
+Your website will be available at:
+`https://chandakya343.github.io/zomatoai-website/`
+
+## 📁 Files
+
+- `index.html` - Main presentation page
+- `styles.css` - Swiss design aesthetic styling
+- `script.js` - Interactive animations and scroll effects
+
+## 🎨 Features
+
+- Swiss design principles
+- Smooth scroll animations
+- Responsive layout
+- Red color scheme (Zomato branding)
+
+## 📝 Local Development
+
+Simply open `index.html` in your browser or use a local server:
 
 ```bash
-# macOS
-open index.html
-
-# Or navigate to:
-cd /Users/aryanchandak/projects/ZomatoAI_Manager/presentation_website
-open index.html
+python3 -m http.server 8000
 ```
 
-## Content Flow
-1. **Problem** - Choice paralysis with 1000+ dishes
-2. **Solution** - AI-powered TOP 5 recommendations
-3. **Architecture** - Multi-agent system breakdown
-4. **Query Flow** - Step-by-step processing
-5. **Memory System** - Active vs Permanent memory
-6. **Advantages** - Speed, relevance, scalability, learning
-7. **Business Impact** - ROI and metrics
-8. **Demo** - Live system showcase
-9. **Conclusion** - Why this matters for Zomato
-
-## Design Principles
-- Clean, minimal Swiss design
-- Typography-first hierarchy
-- Smooth scroll animations
-- Question-and-answer format
-- Self-explanatory content
-
-## For Presentation
-1. Open in browser
-2. Full screen (F11)
-3. Scroll through sections
-4. Each section tells part of the story
-
-Built for Zomato AI PM Application
+Then visit `http://localhost:8000`
