@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZomatoAI - Solving Choice Paralysis in Food Ordering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">🍔 ZomatoAI</h1>
+                <p class="subtitle fade-in-delay-1">Solving the Choice Paralysis Problem</p>
+                <p class="author fade-in-delay-2">by Aryan Chandak • AI Product Manager Application</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="qa-block fade-in-on-scroll">
+                <div class="question">
+                    <span class="q-icon">❓</span>
+                    <h2>What's the single biggest problem when ordering food on Zomato?</h2>
+                </div>
+                <div class="answer">
+                    <div class="answer-content">
+                        <h3>Choice Paralysis.</h3>
+                        <p class="large-text">You open Zomato. You're hungry. You want food.</p>
+                        <p class="large-text">But then... <strong>1,000+ dishes</strong> stare back at you.</p>
+                        
+                        <div class="problem-cards">
+                            <div class="card">
+                                <div class="card-emoji">😰</div>
+                                <h4>Analysis Paralysis</h4>
+                                <p>Too many options = Can't decide</p>
+                            </div>
+                            <div class="card">
+                                <div class="card-emoji">⏱️</div>
+                                <h4>Decision Fatigue</h4>
+                                <p>Scrolling for 15+ minutes</p>
+                            </div>
+                            <div class="card">
+                                <div class="card-emoji">😕</div>
+                                <h4>Unsatisfying Choice</h4>
+                                <p>Still not sure if it's what you want</p>
+                            </div>
+                        </div>
+
+                        <blockquote class="personal-quote">
+                            "I personally spend way too long just deciding what to eat. I wish someone could just show me the 5 best options for ME, and I'd just pick from those."
+                            <footer>— The motivation behind ZomatoAI</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section class="section bg-gradient">
+        <div class="container">
+            <div class="qa-block fade-in-on-scroll">
+                <div class="question">
+                    <span class="q-icon">💡</span>
+                    <h2>How do we solve this?</h2>
+                </div>
+                <div class="answer">
+                    <div class="answer-content">
+                        <h3>An AI agent that does the hard work FOR you.</h3>
+                        
+                        <div class="solution-flow">
+                            <div class="flow-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>You ask naturally</h4>
+                                    <p>"I want something spicy and under ₹300"</p>
+                                </div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>AI analyzes 1000+ dishes</h4>
+                                    <p>Uses your history & preferences</p>
+                                </div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>You get TOP 5</h4>
+                                    <p>Personalized, ranked recommendations</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="highlight-box">
+                            <p class="large-text"><strong>From 1,000 overwhelming options → To 5 perfect choices</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Overview -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="qa-block fade-in-on-scroll">
+                <div class="question">
+                    <span class="q-icon">🏗️</span>
+                    <h2>How does the system work?</h2>
+                </div>
+                <div class="answer">
+                    <div class="answer-content">
+                        <h3>Three major components working together:</h3>
+                        
+                        <div class="architecture-diagram">
+                            <div class="arch-component">
+                                <div class="component-header query-handler">
+                                    <h4>🤖 Query Handler Agent</h4>
+                                </div>
+                                <div class="component-body">
+                                    <p><strong>Decides:</strong> Do we need to search the database?</p>
+                                    <p><strong>Input:</strong> User query + memory</p>
+                                    <p><strong>Output:</strong> Database query OR skip to memory</p>
+                                </div>
+                            </div>
+
+                            <div class="arch-component">
+                                <div class="component-header database">
+                                    <h4>🗃️ Smart Database Filter</h4>
+                                </div>
+                                <div class="component-body">
+                                    <p><strong>Filters:</strong> 1,000 dishes → Relevant subset</p>
+                                    <p><strong>Uses:</strong> Pandas queries on metadata</p>
+                                    <p><strong>Result:</strong> Only dishes matching criteria</p>
+                                </div>
+                            </div>
+
+                            <div class="arch-component">
+                                <div class="component-header memory">
+                                    <h4>🧠 Memory System</h4>
+                                </div>
+                                <div class="component-body">
+                                    <p><strong>Active:</strong> Last 20 feedbacks (detailed)</p>
+                                    <p><strong>Permanent:</strong> Consolidated patterns</p>
+                                    <p><strong>Learns:</strong> Preferences, allergies, tastes</p>
+                                </div>
+                            </div>
+
+                            <div class="arch-component">
+                                <div class="component-header recommender">
+                                    <h4>🎯 Recommendation Agent</h4>
+                                </div>
+                                <div class="component-body">
+                                    <p><strong>Combines:</strong> Filtered dishes + memory</p>
+                                    <p><strong>Generates:</strong> TOP 5 personalized picks</p>
+                                    <p><strong>Explains:</strong> WHY each recommendation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Dive: Query Flow -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="qa-block fade-in-on-scroll">
+                <div class="question">
+                    <span class="q-icon">🔄</span>
+                    <h2>What happens when a user asks for recommendations?</h2>
+                </div>
+                <div class="answer">
+                    <div class="answer-content">
+                        <h3>The complete flow, step by step:</h3>
+                        
+                        <div class="flow-diagram">
+                            <div class="flow-item">
+                                <div class="flow-badge">User Input</div>
+                                <div class="flow-box">
+                                    <p>"Show me vegetarian dishes under ₹200"</p>
+                                </div>
+                            </div>
+
+                            <div class="flow-divider">↓</div>
+
+                            <div class="flow-item">
+                                <div class="flow-badge">Query Handler</div>
+                                <div class="flow-box">
+                                    <p><strong>Decision:</strong> Need database search ✓</p>
+                                    <p><strong>Generates:</strong> <code>food_df[(food_df['dietary']=='Vegetarian') & (food_df['price']<200)]</code></p>
+                                </div>
+                            </div>
+
+                            <div class="flow-divider">↓</div>
+
+                            <div class="flow-item">
+                                <div class="flow-badge">Database Filter</div>
+                                <div class="flow-box">
+                                    <p><strong>Search:</strong> 1,000 dishes</p>
+                                    <p><strong>Filter:</strong> Vegetarian + Under ₹200</p>
+                                    <p><strong>Result:</strong> 12 matching dishes</p>
+                                </div>
+                            </div>
+
+                            <div class="flow-divider">↓</div>
+
+                            <div class="flow-item">
+                                <div class="flow-badge">Memory Lookup</div>
+                                <div class="flow-box">
+                                    <p><strong>Active Memory:</strong> "User loved Masala Dosa (5★)"</p>
+                                    <p><strong>Patterns:</strong> "Prefers South Indian, Medium spice"</p>
+                                    <p><strong>Avoids:</strong> "Disliked creamy dishes (Butter Chicken 3★)"</p>
+                                </div>
+                            </div>
+
+                            <div class="flow-divider">↓</div>
+
+                            <div class="flow-item">
+                                <div class="flow-badge">Recommendation Agent</div>
+                                <div class="flow-box">
+                                    <p><strong>Combines:</strong> 12 dishes + user memory</p>
+                                    <p><strong>Ranks:</strong> By relevance to user</p>
+                                    <p><strong>Returns:</strong> TOP 5 with explanations</p>
+                                </div>
+                            </div>
+
+                            <div class="flow-divider">↓</div>
+
+                            <div class="flow-item">
+                                <div class="flow-badge">User Sees</div>
+                                <div class="flow-box success">
+                                    <p>✅ 5 perfect recommendations</p>
+                                    <p>✅ Each with explanation based on their history</p>
+                                    <p>✅ Easy choice instead of 1,000!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memory System Deep Dive -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="qa-block fade-in-on-scroll">
+                <div class="question">
+                    <span class="q-icon">🧠</span>
+                    <h2>Why have both Active and Permanent memory?</h2>
+                </div>
+                <div class="answer">
+                    <div class="answer-content">
+                        <h3>Because food history is low-signal information.</h3>
+                        
+                        <div class="memory-comparison">
+                            <div class="memory-col">
+                                <div class="memory-type bad">
+                                    <h4>❌ Putting ALL history in context</h4>
+                                    <ul>
+                                        <li>100+ detailed order records</li>
+                                        <li>Pollutes the context window</li>
+                                        <li>Slows down processing</li>
+                                        <li>AI gets confused by noise</li>
+                                        <li>Most orders aren't relevant</li>
+                                    </ul>
+                                    <p class="result-bad">Result: Slower, worse recommendations</p>
+                                </div>
+                            </div>
+
+                            <div class="memory-col">
+                                <div class="memory-type good">
+                                    <h4>✅ Smart Memory System</h4>
+                                    <div class="memory-layer">
+                                        <h5>Active Memory (Last 20)</h5>
+                                        <p>Recent, detailed feedback</p>
+                                        <p class="example">"Loved Chicken Biryani - spices perfect (5★)"</p>
+                                    </div>
+                                    <div class="memory-layer">
+                                        <h5>Permanent Memory (Consolidated)</h5>
+                                        <p>Extracted patterns & insights</p>
+                                        <p class="example">"Allergic to peanuts, prefers medium-high spice, loves biryani"</p>
+                                    </div>
+                                    <p class="result-good">Result: Fast, highly relevant recommendations</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="insight-box">
+                            <p><strong>Key Insight:</strong> We don't need to remember every single order. We need to remember what MATTERS — your preferences, patterns, and recent context.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Advantages -->
+    <section class="section bg-gradient">
+        <div class="container">
+            <div class="qa-block fade-in-on-scroll">
+                <div class="question">
+                    <span class="q-icon">⚡</span>
+                    <h2>What makes this approach powerful?</h2>
+                </div>
+                <div class="answer">
+                    <div class="answer-content">
+                        <h3>Four key advantages:</h3>
+                        
+                        <div class="advantages-grid">
+                            <div class="advantage-card">
+                                <div class="advantage-icon">🚀</div>
+                                <h4>Speed</h4>
+                                <p>Database filtering reduces 1,000 dishes to ~10-20 relevant ones BEFORE AI processing</p>
+                                <p class="metric">~2-3 second response time</p>
+                            </div>
+
+                            <div class="advantage-card">
+                                <div class="advantage-icon">🎯</div>
+                                <h4>Relevance</h4>
+                                <p>Memory system ensures recommendations match your actual preferences, not just random filters</p>
+                                <p class="metric">Personalized to YOUR taste</p>
+                            </div>
+
+                            <div class="advantage-card">
+                                <div class="advantage-icon">📊</div>
+                                <h4>Scalability</h4>
+                                <p>Works with 1,000 dishes or 100,000 dishes - database filtering handles scale</p>
+                                <p class="metric">Production-ready architecture</p>
+                            </div>
+
+                            <div class="advantage-card">
+                                <div class="advantage-icon">🔄</div>
+                                <h4>Learning</h4>
+                                <p>Every order and feedback improves future recommendations</p>
+                                <p class="metric">Gets better over time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Matters -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="qa-block fade-in-on-scroll">
+                <div class="question">
+                    <span class="q-icon">🎯</span>
+                    <h2>Why does this approach matter?</h2>
+                </div>
+                <div class="answer">
+                    <div class="answer-content">
+                        <h3>Because the entire system is TUNABLE.</h3>
+                        
+                        <div class="highlight-box tunability">
+                            <h4>🎛️ This is the key insight:</h4>
+                            <p class="large-text">Every component can be adjusted via prompts, parameters, and configuration.</p>
+                            <p class="large-text">The infrastructure supports <strong>complete tunability</strong>.</p>
+                        </div>
+
+                        <div class="tunability-grid">
+                            <div class="tune-card">
+                                <h4>🤖 Query Handler</h4>
+                                <ul>
+                                    <li>Tune when to search database</li>
+                                    <li>Adjust decision thresholds</li>
+                                    <li>Modify via prompt engineering</li>
+                                </ul>
+                            </div>
+
+                            <div class="tune-card">
+                                <h4>🗃️ Database Filtering</h4>
+                                <ul>
+                                    <li>More aggressive or lenient filtering</li>
+                                    <li>Feature enrichment level</li>
+                                    <li>SQL query complexity</li>
+                                </ul>
+                            </div>
+
+                            <div class="tune-card">
+                                <h4>🧠 Memory System</h4>
+                                <ul>
+                                    <li>Active memory size (10, 20, 50?)</li>
+                                    <li>Consolidation strategy</li>
+                                    <li>Pattern extraction depth</li>
+                                </ul>
+                            </div>
+
+                            <div class="tune-card">
+                                <h4>🎯 Recommender</h4>
+                                <ul>
+                                    <li>Diversity vs relevance balance</li>
+                                    <li>Explanation detail level</li>
+                                    <li>TOP 3, 5, or 10 recommendations</li>
+                                </ul>
+                            </div>
+
+                            <div class="tune-card">
+                                <h4>📊 Logging</h4>
+                                <ul>
+                                    <li>Detailed or minimal logs</li>
+                                    <li>Performance metrics</li>
+                                    <li>User behavior tracking</li>
+                                </ul>
+                            </div>
+
+                            <div class="tune-card">
+                                <h4>💰 Cost vs Quality</h4>
+                                <ul>
+                                    <li>Faster/cheaper vs slower/better</li>
+                                    <li>Model selection per component</li>
+                                    <li>Caching strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="insight-box">
+                            <p><strong>This isn't a rigid system.</strong> It's a flexible framework where every decision can be optimized based on real-world metrics and business needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Improvements -->
+    <section class="section bg-gradient">
+        <div class="container">
+            <div class="qa-block fade-in-on-scroll">
+                <div class="question">
+                    <span class="q-icon">🚀</span>
+                    <h2>What are the future improvements?</h2>
+                </div>
+                <div class="answer">
+                    <div class="answer-content">
+                        <h3>This is just the foundation. Here's where we can go:</h3>
+                        
+                        <div class="future-improvement">
+                            <div class="improvement-number">1</div>
+                            <div class="improvement-content">
+                                <h4>🎯 Multi-Angle SQL Queries</h4>
+                                <p><strong>Current:</strong> One SQL query filters the database</p>
+                                <p><strong>Future:</strong> Multiple queries from different angles (price-focused, cuisine-focused, rating-focused) → Merge results → Maximum coverage</p>
+                                <div class="code-example">
+                                    Query 1: Price + Dietary<br>
+                                    Query 2: Cuisine + Spice Level<br>
+                                    Query 3: Rating + Prep Time<br>
+                                    → Union → 200 diverse options
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="future-improvement">
+                            <div class="improvement-number">2</div>
+                            <div class="improvement-content">
+                                <h4>🎚️ Re-Ranker Layer</h4>
+                                <p><strong>Current:</strong> SQL filters 1000 → ~20 → Recommender picks 5</p>
+                                <p><strong>Future:</strong> SQL filters 1000 → ~200 → <strong>Re-ranker</strong> narrows to 50 → Recommender picks 5</p>
+                                <div class="benefit-box">
+                                    <p><strong>Why?</strong> Re-rankers are more expensive but more accurate. Use them on a smaller set (200 instead of 1000) to balance cost and quality.</p>
+                                    <p><strong>Bonus:</strong> Re-ranker can be personalized too!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="future-improvement">
+                            <div class="improvement-number">3</div>
+                            <div class="improvement-content">
+                                <h4>📊 Rich Feature Enrichment</h4>
+                                <p><strong>Current:</strong> 12 metadata fields per dish</p>
+                                <p><strong>Future:</strong> Add more context:</p>
+                                <ul class="enrichment-list">
+                                    <li>🕐 Peak ordering times</li>
+                                    <li>⭐ User demographic preferences</li>
+                                    <li>🌶️ Detailed spice profiles</li>
+                                    <li>🥗 Nutritional information</li>
+                                    <li>📍 Delivery time estimates</li>
+                                    <li>💬 Sentiment from reviews</li>
+                                </ul>
+                                <p>More features → Richer SQL outputs → Better filtering → More relevant recommendations</p>
+                            </div>
+                        </div>
+
+                        <div class="future-improvement">
+                            <div class="improvement-number">4</div>
+                            <div class="improvement-content">
+                                <h4>🎛️ Prompt-Based Behavior Tuning</h4>
+                                <p><strong>The beauty of this architecture:</strong> Change agent behavior through prompts alone</p>
+                                <div class="tuning-examples">
+                                    <div class="tune-example">
+                                        <span class="tune-label">More Diversity:</span>
+                                        <p>"Prioritize variety across cuisines"</p>
+                                    </div>
+                                    <div class="tune-example">
+                                        <span class="tune-label">Budget-Focused:</span>
+                                        <p>"Weight price heavily in rankings"</p>
+                                    </div>
+                                    <div class="tune-example">
+                                        <span class="tune-label">Exploration:</span>
+                                        <p>"Suggest dishes user hasn't tried before"</p>
+                                    </div>
+                                    <div class="tune-example">
+                                        <span class="tune-label">Safe Choices:</span>
+                                        <p>"Only recommend highly-rated, proven dishes"</p>
+                                    </div>
+                                </div>
+                                <p><strong>No code changes needed.</strong> Just tune the prompts.</p>
+                            </div>
+                        </div>
+
+                        <div class="future-improvement">
+                            <div class="improvement-number">5</div>
+                            <div class="improvement-content">
+                                <h4>📈 Adaptive Logging & Monitoring</h4>
+                                <p>Configure what to track based on current needs:</p>
+                                <ul class="enrichment-list">
+                                    <li>Minimal logging for cost savings</li>
+                                    <li>Detailed logging for debugging</li>
+                                    <li>A/B test tracking for experiments</li>
+                                    <li>User journey analytics</li>
+                                    <li>Performance metrics per component</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mega-highlight">
+                            <h3>🎯 The Key Insight</h3>
+                            <p class="large-text">This architecture isn't rigid. Every component, every decision, every parameter is <strong>tunable</strong>.</p>
+                            <p class="large-text">Want better accuracy? Add a re-ranker.</p>
+                            <p class="large-text">Want lower cost? Simplify queries.</p>
+                            <p class="large-text">Want more diversity? Adjust the prompt.</p>
+                            <p class="large-text"><strong>The infrastructure supports whatever business decisions we make.</strong></p>
+                        </div>
+
+                        <div class="interview-note">
+                            <p><strong>Note:</strong> These improvements are ready to discuss in the interview. Each one has technical depth and business rationale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="demo-section fade-in-on-scroll">
+                <h2>See it in action</h2>
+                <p class="demo-subtitle">Live demo of ZomatoAI Manager</p>
+                
+                <div class="demo-screenshot">
+                    <div class="browser-frame">
+                        <div class="browser-header">
+                            <div class="browser-buttons">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="browser-url">localhost:8501</div>
+                        </div>
+                        <div class="browser-content">
+                            <div class="demo-content">
+                                <h3>🍔 ZomatoAI Manager</h3>
+                                <div class="demo-query">
+                                    <input type="text" placeholder="Show me vegetarian dishes under ₹200" disabled>
+                                    <button>Get Recommendations</button>
+                                </div>
+                                <div class="demo-results">
+                                    <div class="demo-rec">1. Masala Dosa - South Spice (₹120)</div>
+                                    <div class="demo-rec">2. Chole Bhature - Punjabi Zaika (₹140)</div>
+                                    <div class="demo-rec">3. Veg Hakka Noodles - Wok Express (₹180)</div>
+                                    <div class="demo-rec">4. Paneer Wrap - Quick Bites (₹160)</div>
+                                    <div class="demo-rec">5. Veg Burger - Burger Town (₹150)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <h4>Built with:</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Google Gemini 2.5</span>
+                        <span class="tech-tag">Multi-Agent System</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="conclusion fade-in-on-scroll">
+                <h2>Why this matters for Zomato</h2>
+                
+                <div class="conclusion-points">
+                    <div class="conclusion-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h4>Solves a Real Problem</h4>
+                            <p>Choice paralysis is the #1 friction point in food ordering</p>
+                        </div>
+                    </div>
+
+                    <div class="conclusion-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h4>Production-Ready Architecture</h4>
+                            <p>Database filtering + smart memory = scalable to millions of users</p>
+                        </div>
+                    </div>
+
+                    <div class="conclusion-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h4>Measurable Impact</h4>
+                            <p>Clear metrics: order frequency, decision time, satisfaction, retention</p>
+                        </div>
+                    </div>
+
+                    <div class="conclusion-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h4>Competitive Advantage</h4>
+                            <p>Most food apps: basic filters. ZomatoAI: intelligent assistant that knows you</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="final-cta">
+                    <h3>From 1,000 overwhelming options...</h3>
+                    <h3>...to 5 perfect recommendations.</h3>
+                    <p class="tagline">That's the power of ZomatoAI.</p>
+                </div>
+
+                <div class="author-section">
+                    <p><strong>Aryan Chandak</strong></p>
+                    <p>AI Product Manager Application • Zomato</p>
+                    <p class="date">October 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
